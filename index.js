@@ -10,6 +10,10 @@ require('dotenv').config();
 require('./Models/db')
 const PORT = process.env.PORT || 8080;
 
+app.get('/', (req, res) => {
+    return res.send('Auth backend is Live!!')
+})
+
 app.get('/ping', (req, res) => {
     return res.send('PONG')
 })
